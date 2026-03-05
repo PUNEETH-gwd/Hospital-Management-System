@@ -1,0 +1,370 @@
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+  "name": "Puneeth",
+  "email": "puneeth@gmail.com",
+  "password": "123456",
+  "role": "admin"
+}
+
+###
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "puneeth@gmail.com",
+  "password": "123456"
+}
+
+###
+GET http://localhost:5000/api/protected
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5YTQwOGE5YzkxZDdiZDZmYzdmZjQ5YyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc3MjM1Nzk5NywiZXhwIjoxNzcyNDQ0Mzk3fQ.WfGI7x3DIv5FJo3UIthtK1eDIw-QUFGcJ1OumbvPSgk
+
+
+
+###
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+  "name": "Dr Smith",
+  "email": "doctor1@gmail.com",
+  "password": "123456",
+  "role": "doctor"
+}
+
+
+###
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+  "name": "Patient1",
+  "email": "patient@gmail.com",
+  "password": "123456",
+  "role": "patient"
+}
+
+
+###
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "doctor@gmail.com",
+  "password": "123456"
+}
+
+
+###
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "patient@gmail.com",
+  "password": "123456"
+}
+
+
+###
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "doctor@gmail.com",
+  "password": "123456"
+}
+
+"69a40dbe27d6800956ce24ad"
+
+###
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "patient@gmail.com",
+  "password": "123456"
+}
+
+
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "doctor@gmail.com",
+  "password": "123456"
+}
+
+
+###
+GET http://localhost:5000/api/appointments/my
+Authorization: "69a40dbe27d6800956ce24ad"
+
+
+###
+PUT http://localhost:5000/api/appointments/update/69a4109927d6800956ce24c3
+Content-Type: application/json
+Authorization: "69a40dbe27d6800956ce24ad"
+
+{
+  "status": "approved"
+}
+
+
+
+
+
+
+
+###
+POST http://localhost:5000/api/appointments/book
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5YTQwZGNmMjdkNjgwMDk1NmNlMjRhZiIsInJvbGUiOiJwYXRpZW50IiwiaWF0IjoxNzcyMzU5NzYwLCJleHAiOjE3NzI0NDYxNjB9.jO2MI8szDhNhBQakeK17WlDc81ynL3V1WtXd02wS3Jc
+
+{
+  "doctorId": "69a40dbe27d6800956ce24ad",
+  "date": "2026-03-05"
+}
+
+
+###
+GET http://localhost:5000/api/appointments/my
+Authorization: 69a40dbe27d6800956ce24ad
+
+
+
+
+
+###
+GET http://localhost:5000/api/appointments/my
+Authorization: "69a40dbe27d6800956ce24ad"
+
+
+
+router.get("/test", (req, res) => {
+    res.send("Appointment route working");
+});
+
+
+###
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "doctor@gmail.com",
+  "password": "123456"
+}
+
+
+###
+GET http://localhost:5000/api/appointments/my
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5YTQwZGJlMjdkNjgwMDk1NmNlMjRhZCIsInJvbGUiOiJkb2N0b3IiLCJpYXQiOjE3NzIzNjExNjgsImV4cCI6MTc3MjQ0NzU2OH0.SZaK-H3s0Rmlf4p--od0tpdDyMfmITwas2VqmURs0jw
+
+
+
+
+###
+GET http://localhost:5000/api/blood/my
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5YTQwZGJlMjdkNjgwMDk1NmNlMjRhZCIsInJvbGUiOiJkb2N0b3IiLCJpYXQiOjE3NzIzNjExNjgsImV4cCI6MTc3MjQ0NzU2OH0.SZaK-H3s0Rmlf4p--od0tpdDyMfmITwas2VqmURs0jw
+
+
+
+###
+PUT http://localhost:5000/api/appointments/update/69a4109927d6800956ce24c3
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5YTQwZGJlMjdkNjgwMDk1NmNlMjRhZCIsInJvbGUiOiJkb2N0b3IiLCJpYXQiOjE3NzIzNjExNjgsImV4cCI6MTc3MjQ0NzU2OH0.SZaK-H3s0Rmlf4p--od0tpdDyMfmITwas2VqmURs0jw
+
+{
+  "status": "approved"
+}
+
+
+###
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "puneeth@gmail.com",
+  "password": "123456"
+}
+
+###
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+  "name": "Puneeth",
+  "email": "puneeth@gmail.com",
+  "password": "123456",
+  "role": "admin"
+}
+
+###
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "puneeth@gmail.com",
+  "password": "123456"
+}
+
+###
+GET http://localhost:5000/api/appointments/admin/stats
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5YTQ1Zjk2Yzg5OWE4MDcxZTQ1NmIyNCIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc3MjM4MDA3NCwiZXhwIjoxNzcyNDY2NDc0fQ.hHABwt7Y22UQ4cwb4m4ddUMA0H9-6xG-oAPTTZJmdRw
+
+
+
+###
+POST http://localhost:5000/api/beds/add
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5YTQ1Zjk2Yzg5OWE4MDcxZTQ1NmIyNCIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc3MjM4MDA3NCwiZXhwIjoxNzcyNDY2NDc0fQ.hHABwt7Y22UQ4cwb4m4ddUMA0H9-6xG-oAPTTZJmdRw
+
+{
+  "bedNumber": 101,
+  "type": "ICU"
+}
+
+###
+GET http://localhost:5000/api/beds/all
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5YTQ1Zjk2Yzg5OWE4MDcxZTQ1NmIyNCIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc3MjM4MDA3NCwiZXhwIjoxNzcyNDY2NDc0fQ.hHABwt7Y22UQ4cwb4m4ddUMA0H9-6xG-oAPTTZJmdRw
+
+
+
+
+###
+PUT http://localhost:5000/api/beds/assign/
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5YTQ1Zjk2Yzg5OWE4MDcxZTQ1NmIyNCIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc3MjM4MDA3NCwiZXhwIjoxNzcyNDY2NDc0fQ.hHABwt7Y22UQ4cwb4m4ddUMA0H9-6xG-oAPTTZJmdRw
+
+
+{
+  "patientId": "69a40dcf27d6800956ce24af"
+}
+
+
+###
+GET http://localhost:5000/api/beds/all
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5YTQ1Zjk2Yzg5OWE4MDcxZTQ1NmIyNCIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc3MjM4MDA3NCwiZXhwIjoxNzcyNDY2NDc0fQ.hHABwt7Y22UQ4cwb4m4ddUMA0H9-6xG-oAPTTZJmdRw
+
+
+
+###
+PUT http://localhost:5000/api/beds/assign/69a4698ab1695e16e5b972ee
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5YTQ1Zjk2Yzg5OWE4MDcxZTQ1NmIyNCIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc3MjM4MDA3NCwiZXhwIjoxNzcyNDY2NDc0fQ.hHABwt7Y22UQ4cwb4m4ddUMA0H9-6xG-oAPTTZJmdRw
+
+{
+  "patientId": "69a40dcf27d6800956ce24af"
+}
+
+
+POST http://localhost:5000/api/beds/add
+
+
+
+###
+POST http://localhost:5000/api/beds/add
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5YTQ1Zjk2Yzg5OWE4MDcxZTQ1NmIyNCIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc3MjM4MDA3NCwiZXhwIjoxNzcyNDY2NDc0fQ.hHABwt7Y22UQ4cwb4m4ddUMA0H9-6xG-oAPTTZJmdRw
+
+{
+  "bedNumber": 101,
+  "type": "ICU"
+}
+
+
+###
+PUT http://localhost:5000/api/beds/discharge/69a4698ab1695e16e5b972ee
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5YTQ1Zjk2Yzg5OWE4MDcxZTQ1NmIyNCIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc3MjM4MDA3NCwiZXhwIjoxNzcyNDY2NDc0fQ.hHABwt7Y22UQ4cwb4m4ddUMA0H9-6xG-oAPTTZJmdRw
+
+
+
+###
+GET http://localhost:5000/api/beds/all
+Authorization:  eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5YTQ1Zjk2Yzg5OWE4MDcxZTQ1NmIyNCIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc3MjM4MDA3NCwiZXhwIjoxNzcyNDY2NDc0fQ.hHABwt7Y22UQ4cwb4m4ddUMA0H9-6xG-oAPTTZJmdRw
+
+
+###
+POST http://localhost:5000/api/blood/stock
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5YTQ1Zjk2Yzg5OWE4MDcxZTQ1NmIyNCIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc3MjM4MDA3NCwiZXhwIjoxNzcyNDY2NDc0fQ.hHABwt7Y22UQ4cwb4m4ddUMA0H9-6xG-oAPTTZJmdRw
+
+{
+  "bloodGroup": "A+",
+  "units": 5
+}
+
+
+###
+POST http://localhost:5000/api/blood/request
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5YTQwZGJlMjdkNjgwMDk1NmNlMjRhZCIsInJvbGUiOiJkb2N0b3IiLCJpYXQiOjE3NzIzODYwNzgsImV4cCI6MTc3MjQ3MjQ3OH0.ZfFqHOj3_amzVQSdHqDcv97ybYBKkru7BMo-x5pBDjc
+
+{
+  "patientId": "69a40dcf27d6800956ce24af",
+  "bloodGroup": "A+",
+  "unitsRequired": 2,
+  "emergency": true
+}
+
+###
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "doctor@gmail.com",
+  "password": "123456"
+}
+###
+POST http://localhost:5000/api/blood/request
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5YTQwZGJlMjdkNjgwMDk1NmNlMjRhZCIsInJvbGUiOiJkb2N0b3IiLCJpYXQiOjE3NzIzODYwNzgsImV4cCI6MTc3MjQ3MjQ3OH0.ZfFqHOj3_amzVQSdHqDcv97ybYBKkru7BMo-x5pBDjc
+
+{
+  "patientId": "69a40dcf27d6800956ce24af",
+  "bloodGroup": "A+",
+  "unitsRequired": 1,
+  "emergency": true
+}
+
+###
+GET http://localhost:5000/api/blood/dashboard
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5YTQwOGE5YzkxZDdiZDZmYzdmZjQ5YyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc3MjM1Nzk5NywiZXhwIjoxNzcyNDQ0Mzk3fQ.WfGI7x3DIv5FJo3UIthtK1eDIw-QUFGcJ1OumbvPSgk
+
+
+###
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+  "name": "Admin User",
+  "email": "admin@gmail.com",
+  "password": "123456",
+  "role": "admin"
+}
+
+
+###
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+  "name": "Dr Akash",
+  "email": "akash@gmail.com",
+  "password": "123456",
+  "role": "doctor"
+}
+
+###
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+  "name": "Patient two",
+  "email": "patient2@gmail.com",
+  "password": "123456",
+  "role": "patient"
+}
+###
+http://localhost:5000/api/auth/doctors
